@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import pl.sda.addressbook.model.Person;
 import pl.sda.addressbook.view.PersonView;
 
+import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -57,5 +58,9 @@ public class RootViewController implements Initializable {
         cityCol.setCellValueFactory(c -> c.getValue().cityProperty());
         postalCodeCol.setCellValueFactory(c -> c.getValue().postalCodeProperty());
         telephoneCol.setCellValueFactory(c -> c.getValue().telephoneProperty());
+    }
+
+    public void loadNewPerson(ActionEvent actionEvent){
+        peronView.loadNewPersonView();
     }
 }
